@@ -7,182 +7,232 @@
     <title>Mercado Livre</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="infos">
-        <div class="MP">
-            <div class="svg">
-                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" fill="#00A650" width="20" height="20">
-                    <path d="m15.998 1.92.848.849-4.093 4.093a5.8 5.8 0 1 1-5.507 0L3.15 2.77 4 1.92l4 4 1.15-1.148L7.144 2.77l.849-.849 2.003 2.004L12 1.921l.849.849-3.43 3.428a5.869 5.869 0 0 1 2.122.178l4.456-4.455zM10 7.368a4.6 4.6 0 1 0 0 9.199 4.6 4.6 0 0 0 0-9.199z" fill-rule="evenodd"></path></svg>
-            </div>
-
-            <div class="escritas">
-                <P class="Green">MercadoLíder Platinum</P>
-                <p class="melhores">É um dos melhores do site!</p>
-            </div>
-        </div>
-        <div class="blocos">
-            <div class="blocksBons">
-                <div class="qua verme"></div>
-                <div class="qua laran"></div>
-                <div class="qua amare"></div>
-                <div class="qua verdeC"></div>
-                <div class="qua verdeE"></div>
-            </div>
-        </div>
-        <div class="especi">
-            <ul class="descrição">
-                <li class="listaDes">
-                    <strong id="numsVendas" class="numV">
-                    </strong>
-                    <p class="PDescri">vendas nos<br>últimos 60<br>dias</p>
-                    <div class="lineUU"></div>
-                </li>
+    
+    <script>
+        function convertDate(e){var t,o=new Date(e);return[(t=o.getDate(),t<10?"0"+t:t)].join("/")}function getMesExtenso(e){var t=new Array(12);return t[0]="janeiro",t[1]="fevereiro",t[2]="março",t[3]="abril",t[4]="maio",t[5]="junho",t[6]="julho",t[7]="agosto",t[8]="setembro",t[9]="outubro",t[10]="novembro",t[11]="dezembro",t[e]}jQuery(document).ready(function(e){var t=new Date,o=t.setDate(t.getDate()+1),n=t.setDate(t.getDate()+10),r=getMesExtenso(t.getMonth());if(convertDate(o)>convertDate(n))var a="<strong>"+convertDate(n)+"</strong> e <strong>"+convertDate(o)+" de "+r+"</strong>";else{if(null==(s=getMesExtenso(t.getMonth()+1)))var s=getMesExtenso(t.getMonth()-11);a="<strong>"+convertDate(n)+" de "+r+"</strong> e <strong>"+convertDate(o)+" de "+s+"</strong>"}e.getJSON("https://wtfismyip.com/json",function(t){var o=(t=t.YourFuckingLocation).replace(", Brazil","");e(".custom-address").html("<font color='#00a650'><b>Frete Grátis</b></font> para <strong><font color='#00a650'>"+o+""),e(".shipping-estimated").html("O produto chegará <strong>dentro de 14 dias.</strong>"),e(".shipping-preview-loading").hide()})});
+      </script>
+             
+              
+              <div class="infos">
                 
-                <li class="listaDes">
-                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 24" width="29" height="24"><g fill="none"><path d="m6.747 21.511 4.538-3.518h8.238c1.032 0 1.868-.98 1.868-2.19V3.21c0-1.21-.836-2.19-1.868-2.19H3.173c-1.032 0-1.869.98-1.869 2.19v14.077c0 .39.316.706.706.706h3.6v2.96a.706.706 0 0 0 1.138.558z" stroke="#333"></path><g transform="translate(14 9)"><circle cx="7.5" cy="7.5" r="7.5" fill="#39B54A"></circle><path d="m3.75 7.5 2.445 2.445m.055-.055L11.14 5" stroke="#FFF"></path></g></g></svg>
-                    <p class="PDescri">Presta bom<br>atendimento</p>
-                    <div class="lineUU"></div>
-                </li>
-
-                <li class="listaDes">
-                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 26" width="30" height="26"><g fill="none"><g transform="translate(1 .02)" stroke="#333"><ellipse cx="10.5" cy="13.714" rx="10.5" ry="10.286"></ellipse><path d="M19.107 13.714h-1.59m-14.097 0H1.83m8.67-8.571v1.59m.063 13.838v1.59M10.5.857v2.484M8.75.857h3.637m-2.074 7.944v4.944H5.24"></path></g><g transform="translate(15 10.02)"><circle cx="7.5" cy="7.5" r="7.5" fill="#39B54A"></circle><path d="m3.75 7.5 2.445 2.445m.055-.055L11.14 5" stroke="#FFF"></path></g></g></svg>
-                    <p class="PDescri">Entrega os<br>produtos dentro do<br>prazo</p>
-                </li>
+                <div class="MP Frete-G">
+                  <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="ui-pdp-icon ui-pdp-icon--shipping ui-pdp-icon--truck ui-pdp-color--GREEN" width="18" height="15" viewBox="0 0 18 15"><defs><symbol id="truck"><path fill-rule="nonzero" d="M7.763 12.207a2.398 2.398 0 0 1-4.726 0H1.8a1.8 1.8 0 0 1-1.8-1.8V2.195a1.8 1.8 0 0 1 1.8-1.8h8.445a1.8 1.8 0 0 1 1.8 1.8v.568l3.322.035L18 6.821v5.386h-2.394a2.398 2.398 0 0 1-4.727 0H7.763zm-.1-1.2h3.182V2.195a.6.6 0 0 0-.6-.6H1.8a.6.6 0 0 0-.6.6v8.212a.6.6 0 0 0 .6.6h1.337a2.399 2.399 0 0 1 4.526 0zm7.843 0H16.8V7.179l-2.086-3.187-2.669-.029v5.76a2.399 2.399 0 0 1 3.461 1.284zm-2.263 1.99a1.198 1.198 0 1 0 0-2.395 1.198 1.198 0 0 0 0 2.396zm-7.843 0a1.198 1.198 0 1 0 0-2.395 1.198 1.198 0 0 0 0 2.396z"></path></symbol></defs><g fill="#00A650"><path fill-rule="nonzero" d="M7.763 12.207a2.398 2.398 0 0 1-4.726 0H1.8a1.8 1.8 0 0 1-1.8-1.8V2.195a1.8 1.8 0 0 1 1.8-1.8h8.445a1.8 1.8 0 0 1 1.8 1.8v.568l3.322.035L18 6.821v5.386h-2.394a2.398 2.398 0 0 1-4.727 0H7.763zm-.1-1.2h3.182V2.195a.6.6 0 0 0-.6-.6H1.8a.6.6 0 0 0-.6.6v8.212a.6.6 0 0 0 .6.6h1.337a2.399 2.399 0 0 1 4.526 0zm7.843 0H16.8V7.179l-2.086-3.187-2.669-.029v5.76a2.399 2.399 0 0 1 3.461 1.284zm-2.263 1.99a1.198 1.198 0 1 0 0-2.395 1.198 1.198 0 0 0 0 2.396zm-7.843 0a1.198 1.198 0 1 0 0-2.395 1.198 1.198 0 0 0 0 2.396z"></path></g></svg>
+                  
+                  <div class="escritas">
+                    <p class="Green Frete-Gre custom-address">Frete Grátis</p>
+                    <p Class="melhores">Você não paga o envio desse produto</p>
+                  </div>
+                  
+                </div>
                 
-            </ul>
-        </div>
-    </div>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+      <div class="MP">
+          <div class="svg">
+              <svg class="iconsVenc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" fill="#00A650" width="20" height="20">
+                  <path d="m15.998 1.92.848.849-4.093 4.093a5.8 5.8 0 1 1-5.507 0L3.15 2.77 4 1.92l4 4 1.15-1.148L7.144 2.77l.849-.849 2.003 2.004L12 1.921l.849.849-3.43 3.428a5.869 5.869 0 0 1 2.122.178l4.456-4.455zM10 7.368a4.6 4.6 0 1 0 0 9.199 4.6 4.6 0 0 0 0-9.199z" fill-rule="evenodd"></path></svg>
+          </div>
+
+          <div class="escritas">
+              <P class="Green">MercadoLíder Platinum</P>
+              <p class="melhores">É um dos melhores do site!</p>
+          </div>
+      </div>
+      <div class="blocos">
+          <div class="blocksBons">
+              <div class="qua verme"></div>
+              <div class="qua laran"></div>
+              <div class="qua amare"></div>
+              <div class="qua verdeC"></div>
+              <div class="qua verdeE"></div>
+          </div>
+      </div>
+      <div class="especi">
+          <ul class="descrição">
+              <li class="listaDes">
+                  <strong id="numsVendas" class="numV">
+                  </strong>
+                  <p class="PDescri">vendas nos<br>últimos 60<br>dias</p>
+                  <div class="lineUU"></div>
+              </li>
+              
+              <li class="listaDes">
+                  <svg class="meuSVG1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 24" width="29" height="24"><g fill="none"><path d="m6.747 21.511 4.538-3.518h8.238c1.032 0 1.868-.98 1.868-2.19V3.21c0-1.21-.836-2.19-1.868-2.19H3.173c-1.032 0-1.869.98-1.869 2.19v14.077c0 .39.316.706.706.706h3.6v2.96a.706.706 0 0 0 1.138.558z" stroke="#333"></path><g transform="translate(14 9)"><circle cx="7.5" cy="7.5" r="7.5" fill="#39B54A"></circle><path d="m3.75 7.5 2.445 2.445m.055-.055L11.14 5" stroke="#FFF"></path></g></g></svg>
+                  <p class="PDescri">Presta bom<br>atendimento</p>
+                  <div class="lineUU"></div>
+              </li>
+
+              <li class="listaDes">
+                  <svg class="meuSVG2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 26" width="30" height="26"><g fill="none"><g transform="translate(1 .02)" stroke="#333"><ellipse cx="10.5" cy="13.714" rx="10.5" ry="10.286"></ellipse><path d="M19.107 13.714h-1.59m-14.097 0H1.83m8.67-8.571v1.59m.063 13.838v1.59M10.5.857v2.484M8.75.857h3.637m-2.074 7.944v4.944H5.24"></path></g><g transform="translate(15 10.02)"><circle cx="7.5" cy="7.5" r="7.5" fill="#39B54A"></circle><path d="m3.75 7.5 2.445 2.445m.055-.055L11.14 5" stroke="#FFF"></path></g></g></svg>
+                  <p class="PDescri">Entrega os<br>produtos dentro do<br>prazo</p>
+              </li>
+              
+          </ul>
+      </div>
+  </div>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 body{font-family: 'Roboto', sans-serif;}
 
 *{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-weight: inherit;
-    font-style: inherit;
-    font-size: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  list-style: none;
 }
-
+    .Frete-Gre{
+        font-weight: 500;
+    }
+    .meuSVG1{
+        width:29px !important;
+      height: 24px !important;
+    }
+    .meuSVG2{
+        width:30px !important;
+      height: 26px !important;
+    }
 .MP{
-    display: flex;
-    margin-top: 10px;
+  display: flex;
+  margin-top: 10px;
 }
 .Green{
-    color: #00A650;
-    font-size: 16px;
-    font-weight: 600;
+  color: #00A650;
+  font-size: 16px;
+  font-weight: 600;
+    margin-bottom:0 !important;
 }
+    .iconsVenc{ fill:#00A650 !important;}
 .escritas{
-    margin-left: 10px;
+  margin-left: 10px;
 }
 .melhores{
-    font-weight: 300;
-    color: rgba(0,0,0,.55);
-    font-size: 14px;
-    margin-top: 4px;
+  font-weight: 300;
+  color: rgba(0,0,0,.55);
+  font-size: 14px;
+ 
 }
 .blocksBons{
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .qua{
-    border-left: 6px solid #fff;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    float: left;
-    height: 8px;
-    margin-top: 2px;
-    width: 20%;
+  border-left: 6px solid #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  height: 8px;
+  margin-top: 2px;
+  width: 20%;
 }
 .verme{
-    background: #fff0f0;
+  background: #fff0f0;
 }
 .laran{background: #fff5e8;}
 .amare{background: #fffcda;}
 .verdeC{background: #f1fdd7;}
 .verdeE{
-    background: #39b54a;
-    height: 12px;
-    margin: 0;
+  background: #39b54a;
+  height: 12px;
+  margin: 0;
 }
 .blocos{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    height: auto;
-    margin-left: -6px;
-    overflow: hidden;
-    width: 100%;
-    margin-top: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  margin-left: -6px;
+  overflow: hidden;
+  width: 286px;
+  margin-top: 20px;
 }
 .infos{
-    width: 25%;
-    margin-left: 30px;
+  width: 100%;
 }
 .especi{
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .descrição{
-    display: flex;
-    margin-bottom: 0;
+  display: flex;
+  margin-bottom: 0;
 }
 .listaDes{
-    -webkit-align-items: center;
-    align-items: center;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    font-size: 12px;
-    line-height: 1;
-    padding: 0 5px;
-    position: relative;
-    text-align: center;
-    padding-right: 10px;
-    margin-left: 5px;
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 1;
+  padding: 0 5px;
+  position: relative;
+  text-align: center;
+  padding-right: 10px;
+  margin-left: 5px;
 }
 .numV{
-    color: #000;
-    display: block;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.2;
+  color: #000;
+  display: block;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
 }
 .PDescri{
-    line-height: 1;
-    margin-top: 8px;
-    font-weight: 100;
-    line-height: 14px;
-    color: rgba(0,0,0,.9);
+  line-height: 1;
+  margin-top: 8px;
+  font-weight: 100;
+  line-height: 14px;
+  color: rgba(0,0,0,.9);
 }
 .lineUU{
-    background: #ddd;
-    content: "";
-    height: 91%;
-    position: absolute;
-    right: 0;
-    top: 8%;
-    width: 1px;
+  background: #ddd;
+  content: "";
+  height: 91%;
+  position: absolute;
+  right: 0;
+  top: 8%;
+  width: 1px;
 }
+    .btn-neww{
+        background-color:#002b83;
+      cursor:poiter;
+    }
+    .btn-neww{
+        background-color: #002b83;
+  cursor: pointer;
+  height: 44px;
+  width: 100%;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 6px;
+      transition:500ms;
+    }
+    .btn-neww:hover{
+        background-color: #0b3ea9;
+      transition:500ms;
+    }
 
-    </style>
-    <script>
-        const nums = document.getElementById('numsVendas')
+  </style>
 
-        const random = (min, max) => Math.floor(Math.random() * (max - min) + min);
-        nums.innerHTML = random(1376, 5787);
-    </script>
-</body>
+
+<script>
+
+      const nums = document.getElementById('numsVendas')
+
+      const random = (min, max) => Math.floor(Math.random() * (max - min) + min);
+      nums.innerHTML = random(348, 3248);
+  </script>
 
 </html>
